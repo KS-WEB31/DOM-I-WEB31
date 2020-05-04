@@ -82,3 +82,4 @@ const contactInfo = document.querySelectorAll('.contact p');
 
 //footer
 const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
