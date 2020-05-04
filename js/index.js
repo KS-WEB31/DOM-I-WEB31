@@ -44,9 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //My code
 
-const keys = Object.keys(siteContent);
-console.log(keys);
-
+//Steps 1 & 2
 //navbar
 //select nav links
 const navLinks = document.querySelectorAll('nav a');
@@ -58,6 +56,7 @@ console.log(navKeys);
 //give each nav link text content
 navLinks.forEach((link, i) => {
   link.textContent = siteContent.nav[navKeys[i]];
+  link.style.color = 'green';
 });
 
 //header
@@ -71,10 +70,6 @@ const headerImg = document.querySelector('#cta-img');
 headerImg.setAttribute('src', siteContent['cta']['img-src']);
 
 //main content
-//get keys from the main-content object
-const mainContentKeys = Object.keys(siteContent['main-content']);
-console.log(mainContentKeys);
-
 //select main-content h4s
 const contentHeaders = document.querySelectorAll('.text-content h4');
 contentHeaders[0].textContent = siteContent['main-content']['features-h4'];
@@ -105,3 +100,5 @@ contactInfo[2].textContent = siteContent.contact.email;
 //footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+//Step 3
