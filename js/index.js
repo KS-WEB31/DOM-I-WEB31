@@ -44,6 +44,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //My code
 
+const keys = Object.keys(siteContent);
+console.log(keys);
+
 //navbar
 //select nav links
 const navLinks = document.querySelectorAll('nav a');
@@ -68,7 +71,17 @@ const headerImg = document.querySelector('#cta-img');
 headerImg.setAttribute('src', '../img/header-img.png');
 
 //main content
+//get keys from the main-content object
+const mainContentKeys = Object.keys(siteContent['main-content']);
+console.log(mainContentKeys);
+
+//select main-content h4s
 const contentHeaders = document.querySelectorAll('.text-content h4');
+contentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+contentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+contentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+contentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+contentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
 
 const contentParas = document.querySelectorAll('.text-content p');
 
@@ -77,6 +90,7 @@ middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
 
 //contact
 const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
 
 const contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].textContent = siteContent.contact.address;
