@@ -68,7 +68,7 @@ const headerButton = document.querySelector('.cta-text button');
 headerButton.textContent = siteContent.cta.button;
 
 const headerImg = document.querySelector('#cta-img');
-headerImg.setAttribute('src', '../img/header-img.png');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
 
 //main content
 //get keys from the main-content object
@@ -84,9 +84,14 @@ contentHeaders[3].textContent = siteContent['main-content']['product-h4'];
 contentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
 
 const contentParas = document.querySelectorAll('.text-content p');
+contentParas[0].textContent = siteContent['main-content']['features-content'];
+contentParas[1].textContent = siteContent['main-content']['about-content'];
+contentParas[2].textContent = siteContent['main-content']['services-content'];
+contentParas[3].textContent = siteContent['main-content']['product-content'];
+contentParas[4].textContent = siteContent['main-content']['vision-content'];
 
 const middleImg = document.querySelector('#middle-img');
-middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //contact
 const contactHeader = document.querySelector('.contact h4');
