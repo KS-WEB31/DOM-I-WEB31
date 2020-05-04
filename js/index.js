@@ -102,3 +102,15 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
 //Step 3
+
+//create first new link
+const firstNewLink = document.createElement('a');
+firstNewLink.textContent = 'Reviews';
+firstNewLink.style.color = 'green';
+document.querySelector('header nav').appendChild(firstNewLink);
+
+//create second new link
+const secondNewLink = document.createElement('a');
+secondNewLink.textContent = 'Shop';
+secondNewLink.style.color = 'green';
+document.querySelector('header nav').prepend(secondNewLink);
