@@ -59,8 +59,10 @@ navLinks.forEach((link, i) => {
 
 //header
 const headerText = document.querySelector('.cta-text h1');
+headerText.textContent = siteContent.cta.h1;
 
 const headerButton = document.querySelector('.cta-text button');
+headerButton.textContent = siteContent.cta.button;
 
 const headerImg = document.querySelector('#cta-img');
 headerImg.setAttribute('src', '../img/header-img.png');
