@@ -44,8 +44,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //My code
 
+//navbar
+//select nav links
 const navLinks = document.querySelectorAll('nav a');
 
+//get keys from the nav object
+const navKeys = Object.keys(siteContent.nav);
+console.log(navKeys);
+
+//give each nav link text content
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent.nav[navKeys[i]];
+});
+
+//header
 const headerText = document.querySelector('.cta-text h1');
 
 const headerButton = document.querySelector('.cta-text button');
@@ -53,6 +65,7 @@ const headerButton = document.querySelector('.cta-text button');
 const headerImg = document.querySelector('#cta-img');
 headerImg.setAttribute('src', '../img/header-img.png');
 
+//main content
 const contentHeaders = document.querySelectorAll('.text-content h4');
 
 const contentParas = document.querySelectorAll('.text-content p');
@@ -60,8 +73,10 @@ const contentParas = document.querySelectorAll('.text-content p');
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
 
+//contact
 const contactHeader = document.querySelector('.contact h4');
 
 const contactInfo = document.querySelectorAll('.contact p');
 
+//footer
 const footer = document.querySelector('footer p');
