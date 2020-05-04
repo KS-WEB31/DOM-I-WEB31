@@ -51,12 +51,14 @@ const headerText = document.querySelector('.cta-text h1');
 const headerButton = document.querySelector('.cta-text button');
 
 const headerImg = document.querySelector('#cta-img');
+headerImg.setAttribute('src', '../img/header-img.png');
 
 const contentHeaders = document.querySelectorAll('.text-content h4');
 
 const contentParas = document.querySelectorAll('.text-content p');
 
 const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
 
 const contactHeader = document.querySelector('.contact h4');
 
