@@ -40,3 +40,77 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//My code
+
+//Steps 1 & 2
+//navbar
+//select nav links
+const navLinks = document.querySelectorAll('nav a');
+
+//get keys from the nav object
+const navKeys = Object.keys(siteContent.nav);
+console.log(navKeys);
+
+//give each nav link text content
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent.nav[navKeys[i]];
+  link.style.color = 'green';
+});
+
+//header
+const headerText = document.querySelector('.cta-text h1');
+headerText.textContent = siteContent.cta.h1;
+
+const headerButton = document.querySelector('.cta-text button');
+headerButton.textContent = siteContent.cta.button;
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+//main content
+//select main-content h4s
+const contentHeaders = document.querySelectorAll('.text-content h4');
+contentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+contentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+contentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+contentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+contentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
+
+const contentParas = document.querySelectorAll('.text-content p');
+contentParas[0].textContent = siteContent['main-content']['features-content'];
+contentParas[1].textContent = siteContent['main-content']['about-content'];
+contentParas[2].textContent = siteContent['main-content']['services-content'];
+contentParas[3].textContent = siteContent['main-content']['product-content'];
+contentParas[4].textContent = siteContent['main-content']['vision-content'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//contact
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent.contact.address;
+contactInfo[1].textContent = siteContent.contact.phone;
+contactInfo[2].textContent = siteContent.contact.email;
+
+//footer
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
+//Step 3
+
+//create first new link
+const firstNewLink = document.createElement('a');
+firstNewLink.textContent = 'Reviews';
+firstNewLink.style.color = 'green';
+document.querySelector('header nav').appendChild(firstNewLink);
+
+//create second new link
+const secondNewLink = document.createElement('a');
+secondNewLink.textContent = 'Shop';
+secondNewLink.style.color = 'green';
+document.querySelector('header nav').prepend(secondNewLink);
